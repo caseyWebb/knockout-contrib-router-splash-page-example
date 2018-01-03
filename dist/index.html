@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ko-router-splash example</title>
+  <link rel="stylesheet" href="/knockout-contrib-router-splash-page-example/dist/273a16ffbcee5beaa3356f82e836135d.css">
+</head>
+<body>
+  <!--
+    Embed the splash in the HTML *before the script tag* so that it is displayed immediately
+    without having to wait for the JS to be parsed.
+
+    You could do this without an observable using $.fadeOut or something similar.
+  -->
+  <div id="splash" data-bind="css: { hidden: splashHidden }">
+    <a data-bind="path: '/'">
+      <img src="http://via.placeholder.com/350x150?text=Splash+Image">
+    </a>
+  </div>
+
+  <app></app>
+
+  <script src="/knockout-contrib-router-splash-page-example/dist/2ecb2fbb2a60ab8ad957b7ea216fc8bd.js"></script>
+</body>
+</html>
