@@ -44,7 +44,7 @@ ko.components.register('overlay-loader', {
   `
 })
 
-export function overlayMiddleware(ctx: Context) {
+export function overlayLoaderMiddleware(ctx: Context) {
   // we only want to run this for the terminal router
   if (ctx.$child) return {}
   return {

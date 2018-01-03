@@ -1,8 +1,8 @@
 import * as $ from 'jquery'
 import * as ko from 'knockout'
 import { Context, Router } from '@profiscience/knockout-contrib-router'
-import * as loading from './loading'
-import * as splash from './splash'
+import { overlayLoaderMiddleware, progressBarMiddleware } from './middleware/loading'
+import { splashScreenMiddleware } from './middleware/splash'
 
 ko.components.register('app', {
   template: `
@@ -41,9 +41,9 @@ Router
   // middleware, it will not finish until the splash is skipped or
   // times out, because it runs in-band (i.e. it does not use ctx.queue
   // or handle promises in a closure.)
-  .use(loading.overlayMiddleware)
-  .use(loading.progressBarMiddleware)
-  .use(splash.middleware)
+  .use(overlayLoaderMiddleware)
+  .use(progressBarMiddleware)
+  .use(splashScreenMiddleware)
 
 // irl, this might be an ajax call that adds data to the context,
 // an import() statement to load the view, or any number of
@@ -63,4 +63,4 @@ Router.useRoutes({
   ]
 })
 
-ko.applyBindings({ splash })
+ko.applyBindings()
