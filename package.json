@@ -8,12 +8,10 @@
   "dependencies": {
     "@profiscience/knockout-contrib-observable-fn": "^1.0.0-alpha.6",
     "@profiscience/knockout-contrib-router": "^1.0.0",
-    "jquery": "^3.2.1",
     "knockout": "^3.4.2",
     "toprogress": "^0.1.3"
   },
   "devDependencies": {
-    "@types/jquery": "^3.2.17",
     "@types/knockout": "^3.4.47",
     "@types/node": "^8.5.2",
     "parcel-bundler": "^1.4.1",

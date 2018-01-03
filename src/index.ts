@@ -1,4 +1,3 @@
-import * as $ from 'jquery'
 import * as ko from 'knockout'
 import { Context, Router } from '@profiscience/knockout-contrib-router'
 import { overlayLoaderMiddleware, progressBarMiddleware } from './middleware/loading'
