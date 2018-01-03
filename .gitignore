@@ -1,2 +1,5 @@
+.DS_Store
+*.log
+.vscode
 .cache
 node_modules

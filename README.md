@@ -13,4 +13,4 @@ $ yarn start
 ```
 
 [@profiscience/knockout-contrib-router]: https://github.com/Profiscience/knockout-contrib/tree/master/packages/router
-[live]: https://caseyWebb.github.io/knockout-contrib-router-splash-page-example
+[live]: https://caseyWebb.github.io/knockout-contrib-router-splash-page-example/dist

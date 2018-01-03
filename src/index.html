@@ -14,10 +14,15 @@
 
     You could do this without an observable using $.fadeOut or something similar.
   -->
-  <div id="splash" data-bind="css: { hidden: splashHidden }">
-    <a data-bind="path: '/'">
-      <img src="http://via.placeholder.com/350x150?text=Splash+Image"/>
-    </a>
+  <div id="splash" data-bind="css: { hidden: splash.hidden }">
+    <img src="https://via.placeholder.com/350x150?text=Splash+Image"/>
+    <!-- Use display: none to prevent this from flashing before JS is executed -->
+    <div style="display: none" data-bind="visible: splash.canContinue">
+      Continuing in <span data-bind="text: splash.timeToContinue"></span>.
+      <a href="#" data-bind="click: splash.skip">
+        Click here to skip
+      </a>
+    </div>
   </div>
 
   <app></app>
